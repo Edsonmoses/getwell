@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('slug')->nullable();
             $table->string('subtitle')->nullable();
             $table->string('status');
-            $table->string('email')->unique();
+            $table->string('email')->unique()->nullable();
             $table->timestamps();
         });
     }

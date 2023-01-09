@@ -27,7 +27,7 @@ class EditContactComponent extends Component
         $this->address = $contacts->address;
         $this->slug = $contacts->slug;
         $this->email = $contacts->email;
-        $this->phone = $contacts->phone;
+        $this->phone = str_replace("\n", ',', trim($contacts->phone));
         $this->facebook = $contacts->facebook;
         $this->linkedin = $contacts->linkedin;
         $this->twitter = $contacts->twitter;
@@ -116,7 +116,7 @@ class EditContactComponent extends Component
         $contacts->address = $this->address;
         $contacts->slug = $this->slug;
         $contacts->email = $this->email;
-        $contacts->phone = $this->phone;
+        $contacts->phone = str_replace("\n", ',', trim($this->phone));
         $contacts->facebook = $this->facebook;
         $contacts->linkedin = $this->linkedin;
         $contacts->twitter = $this->twitter;

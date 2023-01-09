@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('toptitle')->nullable();
             $table->string('topsubtitle')->nullable();
             $table->string('status')->nullable();
+            $table->string('postedby');
             $table->bigInteger('department_id')->unsigned()->nullable();
             $table->bigInteger('timetable_id')->unsigned()->nullable();
             $table->timestamps();

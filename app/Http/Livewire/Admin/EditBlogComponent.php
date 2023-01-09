@@ -124,7 +124,7 @@ class EditBlogComponent extends Component
         $blog->category_id = $this->category_id;
         $blog->status = $this->status;
         $blog->postedby = $this->postedby;
-        if ($this->newavatar) {
+        if ($this->newimage) {
             $imageName = Carbon::now()->timestamp . '.' . $this->newimage->extension();
             $this->newimage->storeAs('blogs', $imageName);
             $blog->image = $imageName;

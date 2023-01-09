@@ -98,7 +98,7 @@ class EditDepartmentComponent extends Component
         ]);
         if ($this->newimage) {
             $this->validateOnly($fields, [
-                'newimage' => 'required|mimes:png,jpg,jpeg,webp',
+                'newimage' => 'required|mimes:png,jpg,jpeg,webp,svg',
             ]);
         }
     }
@@ -115,7 +115,7 @@ class EditDepartmentComponent extends Component
         ]);
         if ($this->newimage) {
             $this->validate([
-                'newimage' => 'required|mimes:png,jpg,jpeg,webp',
+                'newimage' => 'required|mimes:png,jpg,jpeg,webp,svg',
             ]);
         }
         $departments = Departments::find($this->departments_id);

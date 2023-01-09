@@ -3,11 +3,13 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
+use App\Models\Testimonials;
 
 class TestimonialComponent extends Component
 {
     public function render()
     {
-        return view('livewire.admin.testimonial-component')->layout('layouts.base');
+        $testimonials = Testimonials::all();
+        return view('livewire.admin.testimonial-component', ['testimonials' => $testimonials])->layout('layouts.base');
     }
 }

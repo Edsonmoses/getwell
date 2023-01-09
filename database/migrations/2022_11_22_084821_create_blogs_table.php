@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('toptitle')->nullable();
             $table->string('topicon')->nullable();
             $table->string('topsubtitle')->nullable();
+            $table->string('status');
             $table->string('postedby');
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->timestamps();

@@ -104,7 +104,7 @@ class AddContactComponent extends Component
         $contacts->address = $this->address;
         $contacts->slug = $this->slug;
         $contacts->email = $this->email;
-        $contacts->phone = $this->phone;
+        $contacts->phone = str_replace("\n", ',', trim($this->phone));
         $contacts->facebook = $this->facebook;
         $contacts->linkedin = $this->linkedin;
         $contacts->twitter = $this->twitter;

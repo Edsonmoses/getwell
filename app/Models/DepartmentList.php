@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class DepartmentList extends Model
 {
     use HasFactory;
+    protected $table = "department_lists";
 }

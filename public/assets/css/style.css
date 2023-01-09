@@ -2836,7 +2836,8 @@ hr {
     margin-bottom: 25px;
     transition: all 0.4s ease;
 }
-.st-iconbox.st-style1 .st-iconbox-icon svg {
+.st-iconbox.st-style1 .st-iconbox-icon svg,
+.st-iconbox.st-style1 .st-iconbox-icon img {
     width: 52px;
 }
 .st-iconbox.st-style1 .st-iconbox-title {
@@ -3480,7 +3481,8 @@ hr {
     justify-content: center;
     border-radius: 50%;
 }
-.st-funfact.st-style1 .st-funfact-icon svg {
+.st-funfact.st-style1 .st-funfact-icon svg,
+.st-funfact.st-style1 .st-funfact-icon img {
     width: 40px;
     height: 40px;
 }

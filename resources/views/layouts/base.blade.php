@@ -392,6 +392,9 @@
                                         <li>
                                             <a href="/admin/add-department">Add Department</a>
                                         </li>
+                                        <li>
+                                            <a href="/admin/department-list">All Department Category</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
@@ -405,10 +408,10 @@
                                 <div class="collapse" id="appointment">
                                     <ul class="nav-second-level">
                                         <li>
-                                            <a href="/admin/appointment">All Appointment</a>
+                                            <a href="/admin/open-appointment">Open Appointment</a>
                                         </li>
                                         <li>
-                                            <a href="/admin/closed">Closed Appointment</a>
+                                            <a href="/admin/closed-appointment">Closed Appointment</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -595,7 +598,7 @@
                                             <a href="/admin/add-contact">Add  Contact</a>
                                         </li>
                                         <li>
-                                            <a href="/admin/add-contact-form">Contact Form</a>
+                                            <a href="/admin/contact-form">Contact Form</a>
                                         </li>
                                     </ul>
                                 </div>

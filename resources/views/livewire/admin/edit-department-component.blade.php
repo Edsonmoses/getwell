@@ -50,7 +50,7 @@
                                         @else
                                             <img src="{{ asset('assets/img/departments')}}/{{ $image }}" width="120"/>
                                         @endif
-                                    @error('image')<p class="text-danger">{{ $message }}</p>@enderror
+                                    @error('newimage')<p class="text-danger">{{ $message }}</p>@enderror
                                 </div>
                         </div> <!-- end col -->
 

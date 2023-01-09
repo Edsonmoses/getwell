@@ -85,7 +85,7 @@ class AddDepartmentComponent extends Component
         ]);
         if ($this->image) {
             $this->validateOnly($fields, [
-                'image' => 'required|mimes:png,jpg,jpeg,webp',
+                'image' => 'required|mimes:png,jpg,jpeg,webp,svg',
             ]);
         }
     }
@@ -102,7 +102,7 @@ class AddDepartmentComponent extends Component
         ]);
         if ($this->image) {
             $this->validate([
-                'image' => 'required|mimes:png,jpg,jpeg,webp',
+                'image' => 'required|mimes:png,jpg,jpeg,webp,svg',
             ]);
         }
         $departments = new Departments();

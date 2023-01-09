@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('title')->nullable();
             $table->string('subtitle')->nullable();
+            $table->string('status');
             $table->string('postedby');
             $table->timestamps();
         });
