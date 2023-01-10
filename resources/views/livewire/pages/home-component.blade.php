@@ -492,7 +492,7 @@
           <div class="st-height-b25 st-height-lg-b25"></div>
           <div class="tab-content">
             @forelse ($departments as $department )
-              @if ()
+              @if ($department->title == 'Crutches')
               <div id="Crutches" class="st-tab active">
                 <div class="st-imagebox st-style2">
                   <div class="row">
@@ -517,7 +517,7 @@
                   </div>
                 </div>
               </div>
-              @elseif ()
+              @elseif ($department->title == 'Crutches')
               <div id="X-ray" class="st-tab active">
                   <div class="st-imagebox st-style2">
                     <div class="row">
@@ -542,7 +542,7 @@
                     </div>
                   </div>
                 </div>
-              @elseif ()
+              @elseif ($department->title == 'Pulmonary')
               <div id="Pulmonary" class="st-tab active">
                 <div class="st-imagebox st-style2">
                   <div class="row">
@@ -567,7 +567,7 @@
                   </div>
                 </div>
               </div>
-              @elseif ()
+              @elseif ($department->title == 'Cardiology')
               <div id="Cardiology" class="st-tab active">
                 <div class="st-imagebox st-style2">
                   <div class="row">
@@ -592,7 +592,7 @@
                   </div>
                 </div>
               </div>
-              @elseif ()
+              @elseif ($department->title == 'Dental Care')
               <div id="DentalCare" class="st-tab active">
                 <div class="st-imagebox st-style2">
                   <div class="row">
@@ -617,7 +617,7 @@
                   </div>
                 </div>
               </div>
-              @elseif ()
+              @elseif ($department->title == 'Neurology')
                 <div id="Neurology" class="st-tab active">
                     <div class="st-imagebox st-style2">
                       <div class="row">
