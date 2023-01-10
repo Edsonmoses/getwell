@@ -492,7 +492,7 @@
           <div class="st-height-b25 st-height-lg-b25"></div>
           <div class="tab-content">
             @forelse ($departments as $department )
-              @if ($department->title == 'Crutches')
+              @if ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#Crutches')
               <div id="Crutches" class="st-tab active">
                 <div class="st-imagebox st-style2">
                   <div class="row">
@@ -517,7 +517,7 @@
                   </div>
                 </div>
               </div>
-              @elseif ($department->title == 'Crutches')
+              @elseif ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#X-ray')
               <div id="X-ray" class="st-tab active">
                   <div class="st-imagebox st-style2">
                     <div class="row">
@@ -567,7 +567,7 @@
                   </div>
                 </div>
               </div>
-              @elseif ($department->title == 'Cardiology')
+              @elseif ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#Cardiology')
               <div id="Cardiology" class="st-tab active">
                 <div class="st-imagebox st-style2">
                   <div class="row">
@@ -592,7 +592,7 @@
                   </div>
                 </div>
               </div>
-              @elseif ($department->title == 'Dental Care')
+              @elseif ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#DentalCare')
               <div id="DentalCare" class="st-tab active">
                 <div class="st-imagebox st-style2">
                   <div class="row">
@@ -617,7 +617,7 @@
                   </div>
                 </div>
               </div>
-              @elseif ($department->title == 'Neurology')
+              @elseif ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#Neurology')
                 <div id="Neurology" class="st-tab active">
                     <div class="st-imagebox st-style2">
                       <div class="row">
