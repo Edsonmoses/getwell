@@ -1,13 +1,13 @@
 <section class="st-shape-wrap" id="contact">
-      <div class="st-shape1"><img src="assets/img/shape/contact-shape1.svg" alt="shape1"></div>
-      <div class="st-shape2"><img src="assets/img/shape/contact-shape2.svg" alt="shape2"></div>
+      <div class="st-shape1"><img src="assets/user/assets/img/shape/contact-shape1.svg" alt="shape1"></div>
+      <div class="st-shape2"><img src="assets/user/assets/img/shape/contact-shape2.svg" alt="shape2"></div>
       <div class="st-height-b120 st-height-lg-b80"></div>
       <div class="container">
         <div class="st-section-heading st-style1">
           <h2 class="st-section-heading-title">Stay connect with us</h2>
           <div class="st-seperator">
             <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-            <div class="st-seperator-center"><img src="assets/img/icons/4.png" alt="icon"></div>
+            <div class="st-seperator-center"><img src="assets/user/assets/img/icons/4.png" alt="icon"></div>
             <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
           </div>
           <div class="st-section-heading-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum the industry's standard dummy text.</div>

@@ -8,17 +8,17 @@
   <!-- Page Title -->
   <title>Getwell</title>
   <!-- Favicon Icon -->
-  <link rel="icon" href="{{ asset('assets/img/favicon.png')}}" />
+  <link rel="icon" href="{{ asset('assets/user/assets/img/favicon.png')}}" />
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/css/lightgallery.min.cs') }}s" />
-  <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/css/jQueryUi.min.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/css/textRotate.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/css/select2.min.css') }}" />
-  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/user/assets/css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/user/assets/css/fontawesome.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/user/assets/css/slick.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/user/assets/css/lightgallery.min.cs') }}s" />
+  <link rel="stylesheet" href="{{ asset('assets/user/assets/css/animate.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/user/assets/css/jQueryUi.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/user/assets/css/textRotate.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/user/assets/css/select2.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/user/assets/css/style.css') }}" />
   
   @livewireStyles
 </head>
@@ -55,7 +55,7 @@
       <div class="container">
         <div class="st-main-header-in">
           <div class="st-main-header-left">
-            <a class="st-site-branding" href="/"><img src="{{ asset('assets/img/getwell-logo.svg')}}" alt="getwell-logo" width="142" height="45"></a>
+            <a class="st-site-branding" href="/"><img src="{{ asset('assets/user/assets/img/getwell-logo.svg')}}" alt="getwell-logo" width="142" height="45"></a>
           </div>
           <div class="st-main-header-right">
             <div class="st-nav">
@@ -65,16 +65,7 @@
                 <li><a href="#department" class="st-smooth-move">Department</a></li>
                 <li><a href="#doctors" class="st-smooth-move">Doctors</a></li>
                 <li><a href="#gallery" class="st-smooth-move">Gallery</a></li>
-                <li><a href="#price" class="st-smooth-move">Pricing</a></li>
                 <li class="menu-item-has-children"><a href="#blog" class="st-smooth-move">Blog</a>
-                  <ul>
-                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                    <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
-                    <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
-                    <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
-                    <li><a href="blog-details-no-sidebar.html">Blog Details No Sidebar</a></li>
-                  </ul>
                 </li>
                 <li><a href="#contact" class="st-smooth-move">Contact</a></li>
               </ul>
@@ -97,7 +88,7 @@
           <div class="col-lg-3">
             <div class="st-footer-widget">
               <div class="st-text-field">
-                <img src="{{ asset('assets/img/getwell-logo.svg')}}" alt="getwell-logo" class="st-footer-logo" width="142" height="45">
+                <img src="{{ asset('assets/user/assets/img/getwell-logo.svg')}}" alt="getwell-logo" class="st-footer-logo" width="142" height="45">
                 <div class="st-height-b25 st-height-lg-b25"></div>
                 <div class="st-footer-text">Lorem ipsum dolor sit consectet adipisicing sed do eiusmod temp incididunt ut labore. Lorem Ipsum is simply dummy.</div>
                 <div class="st-height-b25 st-height-lg-b25"></div>
@@ -178,19 +169,19 @@
   <!-- End Video Popup -->
 
   <!-- Scripts -->
-  <script src="{{ asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
-  <script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
-  <script src="{{ asset('assets/js/isotope.pkg.min.js')}}"></script>
-  <script src="{{ asset('assets/js/jquery.slick.min.js')}}"></script>
-  <script src="{{ asset('assets/js/mailchimp.min.js')}}"></script>
-  <script src="{{ asset('assets/js/counter.min.js')}}"></script>
-  <script src="{{ asset('assets/js/lightgallery.min.js')}}"></script>
-  <script src="{{ asset('assets/js/ripples.min.js')}}"></script>
-  <script src="{{ asset('assets/js/wow.min.js')}}"></script>
-  <script src="{{ asset('assets/js/jQueryUi.js')}}"></script>
-  <script src="{{ asset('assets/js/textRotate.min.js')}}"></script>
-  <script src="{{ asset('assets/js/select2.min.js')}}"></script>
-  <script src="{{ asset('assets/js/main.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/isotope.pkg.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/jquery.slick.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/mailchimp.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/counter.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/lightgallery.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/ripples.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/wow.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/jQueryUi.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/textRotate.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/select2.min.js')}}"></script>
+  <script src="{{ asset('assets/user/assets/js/main.js')}}"></script>
   @livewireScripts
 </body>
 </html>

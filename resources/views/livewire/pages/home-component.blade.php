@@ -37,7 +37,7 @@
             @forelse ($sliders as $slider )
               <div class="slick-slide-in">
               <div class="st-hero-img">
-                <img src="{{ asset('assets/img/hero')}}/{{ $slider->hero }}" alt="{{ $slider->title }}">
+                <img src="{{ asset('assets/user/assets/img/hero')}}/{{ $slider->hero }}" alt="{{ $slider->title }}">
               </div>
             </div>
             @empty
@@ -51,7 +51,7 @@
           <div class="slick-arrow-right"><i class="fa fa-angle-right"></i></div>
         </div>
       </div><!-- .st-slider -->
-      <div class="st-hero-shape st-style1"><img src="{{ asset('assets/img/shape/hero-shape2.png')}}" alt="hero shape"></div>
+      <div class="st-hero-shape st-style1"><img src="{{ asset('assets/user/assets/img/shape/hero-shape2.png')}}" alt="hero shape"></div>
     </div>
     <!-- End Hero Seciton -->
 
@@ -64,7 +64,7 @@
             <div class="col-lg-4">
             <div class="st-iconbox st-style1">
               <div class="st-iconbox-icon st-purple-box">
-                <img src="{{ asset('assets/img/features')}}/{{$feature->image }}" alt="{!! $feature->title !!}">
+                <img src="{{ asset('assets/user/assets/img/features')}}/{{$feature->image }}" alt="{!! $feature->title !!}">
               </div>
               <h2 class="st-iconbox-title">{!! $feature->title !!}</h2>
               <div class="st-iconbox-text">{!! $feature->desc !!}</div>
@@ -82,7 +82,7 @@
     <!-- Start About Seciton -->
     <section class="st-about-wrap" id="about">
       <div class="st-shape-bg">
-        <img src="{{ asset('assets/img/shape/about-bg-shape.svg')}}" alt="shape">
+        <img src="{{ asset('assets/user/assets/img/shape/about-bg-shape.svg')}}" alt="shape">
       </div>
       <div class="st-height-b120 st-height-lg-b50"></div>
       <div class="container">
@@ -93,7 +93,7 @@
               @endif
               <div class="st-seperator">
                 <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-                <div class="st-seperator-center"><img src="{{ asset('assets/img/icons/4.png')}}" alt="icon"></div>
+                <div class="st-seperator-center"><img src="{{ asset('assets/user/assets/img/icons/4.png')}}" alt="icon"></div>
                 <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
               </div>
               @if ($about->subtitle)
@@ -124,7 +124,7 @@
                   <div class="st-height-b25 st-height-lg-b25"></div>
                   <div class="st-text-block-avatar">
                      @if ($about->avatar)
-                    <div class="st-avatar-img"><img src="{{ asset('assets/img/aboutus')}}/{{ $about->avatar }}" alt="{{ $about->aname }}"></div>
+                    <div class="st-avatar-img"><img src="{{ asset('assets/user/assets/img/aboutus')}}/{{ $about->avatar }}" alt="{{ $about->aname }}"></div>
                     @endif
                     <div class="st-avatar-info">
                        @if ($about->aname)
@@ -232,17 +232,17 @@
     <section id="department">
       <div class="st-height-b120 st-height-lg-b80"></div>
       <div class="container">
-        @forelse ($departments as $department )
+        @forelse ($departments as $division )
           @if ($loop->first)
-            <div class="st-section-heading st-style1">
-              <h2 class="st-section-heading-title">{{ $department->toptitle }}</h2>
-              <div class="st-seperator">
-                <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-                <div class="st-seperator-center"><img src="{{ asset('assets/img/icons/4.png')}}" alt="icon"></div>
-                <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
+              <div class="st-section-heading st-style1">
+                <h2 class="st-section-heading-title">{!! $division->toptitle !!}</h2>
+                <div class="st-seperator">
+                  <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
+                  <div class="st-seperator-center"><img src="assets/user/assets/img/icons/4.png" alt="icon"></div>
+                  <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
+                </div>
+                <div class="st-section-heading-subtitle">{!! $division->topsubtitle !!}</div>
               </div>
-              <div class="st-section-heading-subtitle">{!! $department->topsubtitle !!}</div>
-            </div>
           @endif
         @empty
           
@@ -260,7 +260,7 @@
             </li>
             <li class="st-tab-title">
               <a href="#X-ray" class="st-red-box">
-                <svg version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 480 480" xml:space="preserve">
                 <g>
                   <path d="M440,128H40c-4.418,0-8,3.582-8,8v208c0,4.418,3.582,8,8,8h52.52c6.941,39.326,3.217,79.793-10.784,117.192
@@ -491,161 +491,186 @@
           </ul>
           <div class="st-height-b25 st-height-lg-b25"></div>
           <div class="tab-content">
-            @forelse ($departments as $department )
-              @if ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#Crutches')
-              <div id="Crutches" class="st-tab active">
-                <div class="st-imagebox st-style2">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="st-imagebox-img"><img src="{{ asset('assets/img/departments')}}/{{ $department->image }}" alt="service"></div>
-                      <div class="st-height-b0 st-height-lg-b30"></div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="st-vertical-middle">
-                        <div class="st-vertical-middle-in">
-                          <div class="st-imagebox-info">
-                            <h2 class="st-imagebox-title">{!! $department->title !!}</h2>
-                            <h4 class="st-imagebox-subtitle">{!! $department->subtitle !!}</h4>
-                            <div class="st-imagebox-text">{!! $department->desc !!}</div>
+            <div id="Crutches" class="st-tab active">
+                @forelse ($departments as $division )
+                        @if($division->id == 1)
+                      <div class="st-imagebox st-style2">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="st-imagebox-img"><img src="{{ asset('assets/user/assets/img/departments')}}/{{ $division->image }}" alt="service"></div>
+                            <div class="st-height-b0 st-height-lg-b30"></div>
                           </div>
-                          <div class="st-imagebox-btn">
-                            <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              @elseif ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#X-ray')
-              <div id="X-ray" class="st-tab active">
-                  <div class="st-imagebox st-style2">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="st-imagebox-img"><img src="{{ asset('assets/img/departments')}}/{{ $department->image }}" alt="service"></div>
-                        <div class="st-height-b0 st-height-lg-b30"></div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="st-vertical-middle">
-                          <div class="st-vertical-middle-in">
-                            <div class="st-imagebox-info">
-                              <h2 class="st-imagebox-title">{!! $department->title !!}</h2>
-                              <h4 class="st-imagebox-subtitle">{!! $department->subtitle !!}</h4>
-                              <div class="st-imagebox-text">{!! $department->desc !!}</div>
-                            </div>
-                            <div class="st-imagebox-btn">
-                              <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              @elseif ($department->title == 'Pulmonary')
-              <div id="Pulmonary" class="st-tab active">
-                <div class="st-imagebox st-style2">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="st-imagebox-img"><img src="{{ asset('assets/img/departments')}}/{{ $department->image }}" alt="service"></div>
-                      <div class="st-height-b0 st-height-lg-b30"></div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="st-vertical-middle">
-                        <div class="st-vertical-middle-in">
-                          <div class="st-imagebox-info">
-                            <h2 class="st-imagebox-title">{!! $department->title !!}</h2>
-                            <h4 class="st-imagebox-subtitle">{!! $department->subtitle !!}</h4>
-                            <div class="st-imagebox-text">{!! $department->desc !!}</div>
-                          </div>
-                          <div class="st-imagebox-btn">
-                            <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              @elseif ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#Cardiology')
-              <div id="Cardiology" class="st-tab active">
-                <div class="st-imagebox st-style2">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="st-imagebox-img"><img src="{{ asset('assets/img/departments')}}/{{ $department->image }}" alt="service"></div>
-                      <div class="st-height-b0 st-height-lg-b30"></div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="st-vertical-middle">
-                        <div class="st-vertical-middle-in">
-                          <div class="st-imagebox-info">
-                            <h2 class="st-imagebox-title">{!! $department->title !!}</h2>
-                            <h4 class="st-imagebox-subtitle">{!! $department->subtitle !!}</h4>
-                            <div class="st-imagebox-text">{!! $department->desc !!}</div>
-                          </div>
-                          <div class="st-imagebox-btn">
-                            <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              @elseif ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#DentalCare')
-              <div id="DentalCare" class="st-tab active">
-                <div class="st-imagebox st-style2">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="st-imagebox-img"><img src="{{ asset('assets/img/departments')}}/{{ $department->image }}" alt="service"></div>
-                      <div class="st-height-b0 st-height-lg-b30"></div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="st-vertical-middle">
-                        <div class="st-vertical-middle-in">
-                          <div class="st-imagebox-info">
-                            <h2 class="st-imagebox-title">{!! $department->title !!}</h2>
-                            <h4 class="st-imagebox-subtitle">{!! $department->subtitle !!}</h4>
-                            <div class="st-imagebox-text">{!! $department->desc !!}</div>
-                          </div>
-                          <div class="st-imagebox-btn">
-                            <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              @elseif ( Str::title(str_replace('-', ' ', Request::segment(2))) == '#Neurology')
-                <div id="Neurology" class="st-tab active">
-                    <div class="st-imagebox st-style2">
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <div class="st-imagebox-img"><img src="{{ asset('assets/img/departments')}}/{{ $department->image }}" alt="service"></div>
-                          <div class="st-height-b0 st-height-lg-b30"></div>
-                        </div>
-                        <div class="col-lg-6">
-                          <div class="st-vertical-middle">
-                            <div class="st-vertical-middle-in">
-                              <div class="st-imagebox-info">
-                                <h2 class="st-imagebox-title">{!! $department->title !!}</h2>
-                                <h4 class="st-imagebox-subtitle">{!! $department->subtitle !!}</h4>
-                                <div class="st-imagebox-text">{!! $department->desc !!}</div>
-                              </div>
-                              <div class="st-imagebox-btn">
-                                <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
+                          <div class="col-lg-6">
+                            <div class="st-vertical-middle">
+                              <div class="st-vertical-middle-in">
+                                <div class="st-imagebox-info">
+                                  <h2 class="st-imagebox-title">{!! $division->title !!}</h2>
+                                  <h4 class="st-imagebox-subtitle">{!! $division->subtitle !!} </h4>
+                                  <div class="st-imagebox-text">{!! $division->desc !!}</div>
+                                </div>
+                                <div class="st-imagebox-btn">
+                                  <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-              @endif
-            @empty
-          
-            @endforelse
+                      @endif
+                @empty
+                  
+                @endforelse
+            </div>
+            <div id="X-ray" class="st-tab">
+                 @forelse ($departments as $division )
+                        @if($division->id == 2)
+                      <div class="st-imagebox st-style2">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="st-imagebox-img"><img src="{{ asset('assets/user/assets/img/departments')}}/{{ $division->image }}" alt="service"></div>
+                            <div class="st-height-b0 st-height-lg-b30"></div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="st-vertical-middle">
+                              <div class="st-vertical-middle-in">
+                                <div class="st-imagebox-info">
+                                  <h2 class="st-imagebox-title">{!! $division->title !!}</h2>
+                                  <h4 class="st-imagebox-subtitle">{!! $division->subtitle !!} </h4>
+                                  <div class="st-imagebox-text">{!! $division->desc !!}</div>
+                                </div>
+                                <div class="st-imagebox-btn">
+                                  <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      @endif
+                @empty
+                  
+                @endforelse
+            </div>
+            <div id="Pulmonary" class="st-tab">
+                 @forelse ($departments as $division )
+                        @if($division->id == 3)
+                      <div class="st-imagebox st-style2">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="st-imagebox-img"><img src="{{ asset('assets/user/assets/img/departments')}}/{{ $division->image }}" alt="service"></div>
+                            <div class="st-height-b0 st-height-lg-b30"></div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="st-vertical-middle">
+                              <div class="st-vertical-middle-in">
+                                <div class="st-imagebox-info">
+                                  <h2 class="st-imagebox-title">{!! $division->title !!}</h2>
+                                  <h4 class="st-imagebox-subtitle">{!! $division->subtitle !!} </h4>
+                                  <div class="st-imagebox-text">{!! $division->desc !!}</div>
+                                </div>
+                                <div class="st-imagebox-btn">
+                                  <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      @endif
+                @empty
+                  
+                @endforelse
+            </div>
+            <div id="Cardiology" class="st-tab">
+                 @forelse ($departments as $division )
+                        @if($division->id == 4)
+                      <div class="st-imagebox st-style2">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="st-imagebox-img"><img src="{{ asset('assets/user/assets/img/departments')}}/{{ $division->image }}" alt="service"></div>
+                            <div class="st-height-b0 st-height-lg-b30"></div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="st-vertical-middle">
+                              <div class="st-vertical-middle-in">
+                                <div class="st-imagebox-info">
+                                  <h2 class="st-imagebox-title">{!! $division->title !!}</h2>
+                                  <h4 class="st-imagebox-subtitle">{!! $division->subtitle !!} </h4>
+                                  <div class="st-imagebox-text">{!! $division->desc !!}</div>
+                                </div>
+                                <div class="st-imagebox-btn">
+                                  <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      @endif
+                @empty
+                  
+                @endforelse
+            </div>
+            <div id="DentalCare" class="st-tab">
+                 @forelse ($departments as $division )
+                        @if($division->id == 5)
+                      <div class="st-imagebox st-style2">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="st-imagebox-img"><img src="{{ asset('assets/user/assets/img/departments')}}/{{ $division->image }}" alt="service"></div>
+                            <div class="st-height-b0 st-height-lg-b30"></div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="st-vertical-middle">
+                              <div class="st-vertical-middle-in">
+                                <div class="st-imagebox-info">
+                                  <h2 class="st-imagebox-title">{!! $division->title !!}</h2>
+                                  <h4 class="st-imagebox-subtitle">{!! $division->subtitle !!} </h4>
+                                  <div class="st-imagebox-text">{!! $division->desc !!}</div>
+                                </div>
+                                <div class="st-imagebox-btn">
+                                  <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      @endif
+                @empty
+                  
+                @endforelse
+            </div>
+            <div id="Neurology" class="st-tab">
+                 @forelse ($departments as $division )
+                        @if($division->id == 1)
+                      <div class="st-imagebox st-style2">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="st-imagebox-img"><img src="{{ asset('assets/user/assets/img/departments')}}/{{ $division->image }}" alt="service"></div>
+                            <div class="st-height-b0 st-height-lg-b30"></div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="st-vertical-middle">
+                              <div class="st-vertical-middle-in">
+                                <div class="st-imagebox-info">
+                                  <h2 class="st-imagebox-title">{!! $division->title !!}</h2>
+                                  <h4 class="st-imagebox-subtitle">{!! $division->subtitle !!} </h4>
+                                  <div class="st-imagebox-text">{!! $division->desc !!}</div>
+                                </div>
+                                <div class="st-imagebox-btn">
+                                  <a href="#" class="st-btn st-style1 st-size-medium st-color1">Read More</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      @endif
+                @empty
+                  
+                @endforelse
+            </div>
           </div>
         </div><!-- .st-tabs -->
       </div>
@@ -656,10 +681,10 @@
     <!-- Start Service Section -->
     <section id="appointment" class="st-shape-wrap st-gray-bg">
       <div class="st-shape4">
-        <img src="{{ asset('assets/img/shape/section_shape.png')}}" alt="shape1">
+        <img src="{{ asset('assets/user/assets/img/shape/section_shape.png')}}" alt="shape1">
       </div>
       <div class="st-shape6">
-        <img src="{{ asset('assets/img/shape/contact-shape3.svg')}}" alt="shape3">
+        <img src="{{ asset('assets/user/assets/img/shape/contact-shape3.svg')}}" alt="shape3">
       </div>
       <div class="st-height-b120 st-height-lg-b80"></div>
       <div class="container">
@@ -667,7 +692,7 @@
           <h2 class="st-section-heading-title">Make an appointment</h2>
           <div class="st-seperator">
             <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-            <div class="st-seperator-center"><img src="{{ asset('assets/img/icons/4.png')}}" alt="icon"></div>
+            <div class="st-seperator-center"><img src="{{ asset('assets/user/assets/img/icons/4.png')}}" alt="icon"></div>
             <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
           </div>
           <div class="st-section-heading-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum the industry's standard dummy text.</div>
@@ -769,7 +794,7 @@
                 <h2 class="st-section-heading-title">{{ $doctors->title }}</h2>
                 <div class="st-seperator">
                   <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-                  <div class="st-seperator-center"><img src="{{ asset('assets/img/icons/4.png')}}" alt="icon"></div>
+                  <div class="st-seperator-center"><img src="{{ asset('assets/user/assets/img/icons/4.png')}}" alt="icon"></div>
                   <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
                 </div>
                 <div class="st-section-heading-subtitle">{!! $doctors->subtitle!!}</div>
@@ -791,10 +816,10 @@
               <div class="slick-slide-in">
                 <div class="st-member st-style1 st-zoom">
                   <div class="st-member-img">
-                    <img src="{{ asset('assets/img/teams')}}/{{ $doctors->image }}" alt="" class="st-zoom-in">
+                    <img src="{{ asset('assets/user/assets/img/teams')}}/{{ $doctors->image }}" alt="" class="st-zoom-in">
                     <a class="st-doctor-link" href="doctor-profile.html"><i class="fas fa-link"></i></a>
                     <div class="st-member-social-wrap">
-                      <img src="{{ asset('assets/img/shape/member-shape.svg')}}" alt="shape" class="st-member-social-bg">
+                      <img src="{{ asset('assets/user/assets/img/shape/member-shape.svg')}}" alt="shape" class="st-member-social-bg">
                       <ul class="st-member-social st-mp0">
                         <li><a href="{{ $doctors->facebook }}"><i class="fab fa-facebook-square"></i></a></li>
                         <li><a href="{{ $doctors->linkedin }}"><i class="fab fa-linkedin"></i></a></li>
@@ -838,7 +863,7 @@
             <h2 class="st-section-heading-title">{{ $gallery->title }}</h2>
             <div class="st-seperator">
               <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-              <div class="st-seperator-center"><img src="{{ asset('assets/img/icons/4.png')}}" alt="icon"></div>
+              <div class="st-seperator-center"><img src="{{ asset('assets/user/assets/img/icons/4.png')}}" alt="icon"></div>
               <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
             </div>
             <div class="st-section-heading-subtitle">{!! $gallery->subtitle !!}</div>
@@ -870,8 +895,8 @@
                       $image = explode(",",$gallery->image);
                   @endphp
               @if (!empty($image[1]))
-              <a href="{{ asset('assets/img/gallery')}}/{{ $image[1] }}" class="st-project st-zoom st-lightbox-item st-link-hover-wrap">
-                <div class="st-project-img st-zoom-in"><img src="{{ asset('assets/img/gallery')}}/{{ $image[1] }}" alt="project1"></div>
+              <a href="{{ asset('assets/user/assets/img/gallery')}}/{{ $image[1] }}" class="st-project st-zoom st-lightbox-item st-link-hover-wrap">
+                <div class="st-project-img st-zoom-in"><img src="{{ asset('assets/user/assets/img/gallery')}}/{{ $image[1] }}" alt="project1"></div>
                 <span class="st-link-hover"><i class="fas fa-arrows-alt"></i></span>
               </a>
               @endif
@@ -887,7 +912,7 @@
     <!-- End gallery Section -->
 
     <!-- Start Before After -->
-    <section class="st-before-after-section st-dynamic-bg st-bg" data-src="{{ asset('assets/img/before-after-bg.jpg')}}">
+    <section class="st-before-after-section st-dynamic-bg st-bg" data-src="{{ asset('assets/user/assets/img/before-after-bg.jpg')}}">
       <div class="st-height-b120 st-height-lg-b80"></div>
       <div class="container">
         @forelse ($before as  $before)
@@ -895,7 +920,7 @@
           <h2 class="st-section-heading-title">{{ $before->title }}</h2>
           <div class="st-seperator">
             <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-            <div class="st-seperator-center"><img src="{{ asset('assets/img/icons/4.png')}}" alt="icon"></div>
+            <div class="st-seperator-center"><img src="{{ asset('assets/user/assets/img/icons/4.png')}}" alt="icon"></div>
             <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
           </div>
           <div class="st-section-heading-subtitle">{!! $before->subtitle !!}</div>
@@ -906,8 +931,8 @@
         <div class="container">
           <div class="st-before-after-in">
             <div class="st-before-after">
-              <div class="st-after st-single-slide st-dynamic-bg" data-src="{{ asset('assets/img/before')}}/{{ $before->after }}"></div>
-              <div class="st-before st-single-slide st-dynamic-bg" data-src="{{ asset('assets/img/before')}}/{{ $before->before }}"></div>
+              <div class="st-after st-single-slide st-dynamic-bg" data-src="{{ asset('assets/user/assets/img/before')}}/{{ $before->after }}"></div>
+              <div class="st-before st-single-slide st-dynamic-bg" data-src="{{ asset('assets/user/assets/img/before')}}/{{ $before->before }}"></div>
               <div class="st-handle-before-after">
                 <span></span>
               </div>
@@ -932,7 +957,7 @@
           <h2 class="st-section-heading-title">{{ $testimonial->title }}</h2>
           <div class="st-seperator">
             <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-            <div class="st-seperator-center"><img src="{{ asset('assets/img/icons/4.png')}}" alt="icon"></div>
+            <div class="st-seperator-center"><img src="{{ asset('assets/user/assets/img/icons/4.png')}}" alt="icon"></div>
             <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
           </div>
           <div class="st-section-heading-subtitle">{!! $testimonial->subtitle !!}.</div>
@@ -951,7 +976,7 @@
                       <div class="slick-slide-in">
                         <div class="st-testimonial st-style1 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
                           <div class="st-testimonial-info">
-                            <div class="st-testimonial-img"><img src="{{ asset('assets/img/testimonials')}}/{{ $testimonial->image }}" alt="{{ $testimonial->name }}"></div>
+                            <div class="st-testimonial-img"><img src="{{ asset('assets/user/assets/img/testimonials')}}/{{ $testimonial->image }}" alt="{{ $testimonial->name }}"></div>
                             <div class="st-testimonial-meta">
                               <h4 class="st-testimonial-name">{{ $testimonial->name }}</h4>
                               <div class="st-testimonial-designation">{{ $testimonial->designation }}</div>
@@ -980,7 +1005,7 @@
     <!-- Start FunFact Aection -->
     <section class="st-gray-bg st-shape-wrap">
       <div class="st-shape4">
-        <img src="{{ asset('assets/img/shape/section_shape.png')}}" alt="shape1">
+        <img src="{{ asset('assets/user/assets/img/shape/section_shape.png')}}" alt="shape1">
       </div>
       <div class="st-height-b120 st-height-lg-b80"></div>
       <div class="container">
@@ -991,7 +1016,7 @@
                 <div class="col-lg-6">
                 <div class="st-funfact st-style1">
                   <div class="st-funfact-icon st-purple-box">
-                   <img src="{{ asset('assets/img/funfacts')}}/{{ $funfact->icon }}" alt="{{ $funfact->title }}">
+                   <img src="{{ asset('assets/user/assets/img/funfacts')}}/{{ $funfact->icon }}" alt="{{ $funfact->title }}">
                   </div>
                   <h2 class="st-funfact-number st-counter">{{ $funfact->number }}</h2>
                   <div class="st-funfact-title">{{ $funfact->title }}</div>
@@ -1007,7 +1032,7 @@
             <div class="st-video-block st-style1 st-zoom">
               @forelse ($funfacts as $funfact )
               @if($loop->first)
-              <div class="st-video-block-img st-zoom-in st-dynamic-bg" data-src="{{ asset('assets/img/funfacts')}}/{{ $funfact->videoimg}}"></div>
+              <div class="st-video-block-img st-zoom-in st-dynamic-bg" data-src="{{ asset('assets/user/assets/img/funfacts')}}/{{ $funfact->videoimg}}"></div>
               <a href="https://www.youtube.com/embed/jRcfE2xxSAw?autoplay=1" class="st-play-btn st-style1 st-video-open">
                 <svg version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 336 336" xml:space="preserve">
@@ -1041,7 +1066,7 @@
     <!-- Start FAQ Section -->
     <section class="st-faq-wrap st-shape-wrap">
       <div class="st-shape5">
-        <img src="{{ asset('assets/img/shape/faq-bg.svg')}}" alt="shape1">
+        <img src="{{ asset('assets/user/assets/img/shape/faq-bg.svg')}}" alt="shape1">
       </div>
       <div class="st-height-b120 st-height-lg-b80"></div>
       <div class="container">
@@ -1052,7 +1077,7 @@
                 <div class="st-faq-img">
                   @forelse ($faqs as $faq )
                    @if($loop->first)
-                    <img src="{{ asset('assets/img/faqs')}}/{{ $faq->faqimg }}" alt="{{ $faq->title }}">
+                    <img src="{{ asset('assets/user/assets/img/faqs')}}/{{ $faq->faqimg }}" alt="{{ $faq->title }}">
                    
                 </div>
               </div>
@@ -1086,14 +1111,14 @@
     <!-- End FAQ Section -->
 
     <!-- Start News Letter -->
-    <section class="st-news-letter-section st-dynamic-bg st-bg" data-src="{{ asset('assets/img/news-letter-bg.png')}}">
+    <section class="st-news-letter-section st-dynamic-bg st-bg" data-src="{{ asset('assets/user/assets/img/news-letter-bg.png')}}">
       <div class="container">
         @forelse ($news as $news )
            <div class="st-section-heading st-style1">
               <h2 class="st-section-heading-title">{{ $news->title }}</h2>
               <div class="st-seperator">
                 <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-                <div class="st-seperator-center"><img src="{{ asset('assets/img/icons/4.png')}}" alt="icon"></div>
+                <div class="st-seperator-center"><img src="{{ asset('assets/user/assets/img/icons/4.png')}}" alt="icon"></div>
                 <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
               </div>
               <div class="st-section-heading-subtitle">{!! $news->subtitle !!}.</div>
@@ -1124,7 +1149,7 @@
               <h2 class="st-section-heading-title">{{ $blog->toptitle }}</h2>
               <div class="st-seperator">
                 <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-                <div class="st-seperator-center"><img src="{{ asset('assets/img/icons/4.png')}}" alt="icon"></div>
+                <div class="st-seperator-center"><img src="{{ asset('assets/user/assets/img/icons/4.png')}}" alt="icon"></div>
                 <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
               </div>
               <div class="st-section-heading-subtitle">{!! $blog->topsubtitle !!}</div>
@@ -1141,7 +1166,7 @@
           <div class="col-lg-4">
             <div class="st-post st-style3">
               <a href="blog-details-right-sidebar.html" class="st-post-thumb st-link-hover-wrap st-zoom">
-                <img class="st-zoom-in" src="{{ asset('assets/img/blogs')}}/{{ $blog->image }}" alt="{{ $blog->title }}">
+                <img class="st-zoom-in" src="{{ asset('assets/user/assets/img/blogs')}}/{{ $blog->image }}" alt="{{ $blog->title }}">
                 <span class="st-link-hover"><i class="fas fa-link"></i></span>
               </a>
               <div class="st-post-info">
@@ -1181,7 +1206,7 @@
                @forelse ($logos as $logo)
               <div class="slick-slide-in">
                 <div class="st-logo-carousel st-style1 st-orange-box">
-                  <img src="{{ asset('assets/img/logos')}}/{{ $logo->logo }}" alt="{{ $logo->logo }}">
+                  <img src="{{ asset('assets/user/assets/img/logos')}}/{{ $logo->logo }}" alt="{{ $logo->logo }}">
                 </div>
               </div><!-- .slick-slide-in -->
               @empty
